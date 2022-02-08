@@ -1,9 +1,14 @@
 :root {
-    --color-body: red;
-    --color-contentBox: yellow;
+    --color-body: grey;
+    --color-contentBox: white;
+    --color-titel: black;
+    --color-tekst: black;
 
     --font-titel-family: serif;
     --font-tekst-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    --padding: 10pt;
+    --borderRadius: 5pt;
 }
 
 * {
@@ -11,13 +16,25 @@
   margin: 0;
 }
 body {
+    background-color: var(--color-body);
+    padding: var(--padding);
     min-height: 100vh;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
+main {
+    display: grid;
+    gap: var(--padding);
+}
 
+.displayGrid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
 .contentBox {
     background-color: var(--color-contentBox);
+    border-radius: var(--borderRadius);
+    padding: var(--padding);
 }
 
 img, picture, video, canvas, svg {
