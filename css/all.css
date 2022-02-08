@@ -1,0 +1,28 @@
+:root {
+    --color-body: red;
+    --color-contentBox: yellow;
+
+    --font-titel-family: serif;
+    --font-tekst-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.contentBox {
+    background-color: var(--color-contentBox);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
