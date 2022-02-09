@@ -1,3 +1,3 @@
 function select(selected) {
-    document.getElementById('row').style.marginLeft = 25 - (50 * (selected - 1)) + "%";
+    document.getElementById('row').style.marginLeft = 9.5 - (80.5 * (selected - 1)) + "vw";
 }
