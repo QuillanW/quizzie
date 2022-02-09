@@ -1,0 +1,22 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#row {
+    width: 100vw;
+    height: 700px;
+}
+
+.question {
+    display: inline-block;
+    margin-top: 50px;
+    height: 600px;
+    width: 50vw;
+    border: solid black 3px;
+    text-align: center;
+}
