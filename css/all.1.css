@@ -13,7 +13,50 @@
     --padding: 15pt;
     --borderRadius: 5pt;
 }
-.hidden {display: none;}
+
+*:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-titel-family); }
+*:not(h1, h2, h3, h4, h5, h6) { font-family: var(--font-tekst-family); }
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+    background-color: var(--color-body);
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+header {
+    background-color: var(--color-header);
+}
+nav {
+    background-color: var(--color-header);
+    border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+
+    border: 1pt solid black;
+    border-top-width: 0pt;
+
+    text-align: center;
+    position: sticky;
+    flex: 0 0 15rem;
+    top: 0;
+}
+nav a {display: block; border-bottom: .3pt solid black;}
+main {
+    display: grid;
+    gap: var(--padding);
+    padding-top: var(--padding);
+    flex: 1 0 25rem;
+}
+.contentBox {
+    background-color: var(--color-contentBox);
+    border-radius: var(--borderRadius);
+    padding: var(--padding);
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
 .displayFlex {
     display: flex;
     flex-wrap: wrap;
@@ -22,50 +65,7 @@
     padding-top: 0;
     gap: var(--padding);
 }
-header {
-    background-color: var(--color-header);
-}
-nav {
-    background-color: var(--color-header);
-    border-radius: 0 0 var(--borderRadius) var(--borderRadius);
-    border: 1pt solid black;
-    border-top-width: 0pt;
-    flex: 0 0 15rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-}
-nav a {display: block; border-bottom: .3pt solid black;}
 
-main {
-    display: grid;
-    gap: var(--padding);
-    padding-top: var(--padding);
-    flex: 1 0 25rem;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-body {
-    background-color: var(--color-body);
-    /* padding: var(--padding); */
-    min-height: 100vh;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
-.contentBox {
-    background-color: var(--color-contentBox);
-    border-radius: var(--borderRadius);
-    padding: var(--padding);
-}
-
-*:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-titel-family); }
-*:not(h1, h2, h3, h4, h5, h6) { font-family: var(--font-tekst-family); }
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-}
 input, button, textarea, select { font: inherit; }
 p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+.hidden {display: none;}
