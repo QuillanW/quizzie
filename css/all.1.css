@@ -6,8 +6,8 @@
     --color-titel: black;
     --color-tekst: black;
 
-    /* --font-titel-family: serif; */
-    --font-titel-family: 'Courier New', Courier, monospace;
+    --font-titel-family: serif;
+    /* --font-titel-family: 'Courier New', Courier, monospace; */
     --font-tekst-family: Verdana, Geneva, Tahoma, sans-serif;
 
     --padding: 15pt;
