@@ -1,3 +1,7 @@
 function select(selected) {
-    document.getElementById('row').style.marginLeft = 9.5 - (80.5 * (selected - 1)) + "vw";
+    for (let i = 1; i < 11; i++) {
+        document.getElementById('box'+i).style.display = 'none';
+      }
+    
+    document.getElementById('box'+selected).style.display = 'block';
 }

@@ -12,6 +12,7 @@ body {
     display: block;
     height: 700px;
     width: max-content;
+    margin-left: 9.5vw;
 }
 
 .question {
