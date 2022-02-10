@@ -1,5 +1,4 @@
-questionOrder = [];
-for (i=0; i<=questions.length || i >= 10; i++)
+questionOrder = [questions[0], questions[1]];
 
 function showQuestion(i) {
     console.log(questionOrder[i])
