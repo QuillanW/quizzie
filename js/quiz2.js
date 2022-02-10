@@ -1,9 +1,8 @@
-let questionOrder = [questions[0], questions[1], questions[2]];
-let givenAnswers = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-showQuestion(0);
+let questionOrder = [0, 1, 2, 3];
 
+showQuestion(0);
 function showQuestion(i) {
-    let question = questionOrder[i];
+    let question = questions[questionOrder[i]];
     let qType = question['type']
     document.getElementById('questionBox').innerText = question['question'];
 
@@ -14,19 +13,36 @@ function showQuestion(i) {
             <button onclick="fillAnswer(${i}, ${q})" class="option">${question['options'][q]}</button>
             `
         }
-    } else if (qType == 'text') {
+    } else if (qType == 'text' || qType == 'number') {
         inerHTML = `
-            <input type="text" id="question${i}">
+            <input type="${qType}" id="question${i}">
             <button onclick="fillAnswer(${i}, 'question${i}')">submit</button>
         `
     }
     document.getElementById('answers').innerHTML = inerHTML
 }
+
+let givenAnswers = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
 function fillAnswer(i, a) {
-    if (isNaN(a)) { a = document.getElementById(a).value; }
+    if (isNaN(a)) { a = document.getElementById(a).value.toLowerCase(); }
     givenAnswers[i] = a;
+    console.log(givenAnswers)
+}
+function checkAnswers() {
+    for (i in questionOrder) {
+        console.log(checkAnswer(i))
+    }
 }
 
-
-function checkAnswer() {
+function checkAnswer(i) {
+    let answer = questions[questionOrder[i]]['answer'];
+    let qType = questions[questionOrder[i]]['type'];
+    let givnAns = givenAnswers[i]
+    if (
+        qType == 'multipleChoice' && answer == givnAns ||
+        qType == 'number' && answer == Number(givnAns) ||
+        qType == 'text' && answer.indexOf(givnAns) != -1
+        ) { return true }
+    // else if (qType == 'text' && answer.indexOf(givenAnswers[i]) != -1) { return true }
+    else { return false }
 }

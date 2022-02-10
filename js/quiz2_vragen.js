@@ -13,6 +13,12 @@ const q2 = {
 const q3 = {
     type: 'text',
     question: 'This is question 3',
-    answers: ['qwerty', 'qwertz', 'azerty'] 
+    answer: ['qwerty', 'qwertz', 'azerty'] 
 }
-const questions = [q1, q2, q3]
+const q4 = {
+    type: 'number',
+    question: 'This is question 4',
+    answer: 42 
+}
+
+const questions = [q1, q2, q3, q4]
