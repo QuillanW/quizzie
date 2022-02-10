@@ -1,13 +1,13 @@
-let questions = [q1, q2]
-let q1 = {
+const q1 = {
     qType: 'multipleChoice',
-    question: 'this is the first question',
+    question: 'This is the first question',
     options: ['option 1', 'option 2', 'option 3', 'option 4'],
     answer: 2
 }
-let q2 = {
+const q2 = {
     qType: 'multipleChoice',
-    question: 'this is question 2',
+    question: 'This is question 2',
     options: ['dddfe', 'ade', 'hggrea', 'asdfeeefasdeef'],
     answer: 2
 }
+const questions = [q1, q2]

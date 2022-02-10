@@ -9,7 +9,7 @@
     <script src="../js/all.js"></script>
     <link rel="stylesheet" href="../css/quiz2.css">
     <script src="../js/quiz2_vragen.js"></script>
-    <script src="../js/quiz2.js"></script>
+    <script src="../js/quiz2.js" defer></script>
 </head>
 <body>
     <div class="displayFlex">
@@ -28,7 +28,12 @@
         <main>
             <div class="contentBox">
                 <h2>Quiz 2</h2>
-                <p id="questionBox"></p>
+                <h3 id="questionBox"></h3>
+                <div class="answers"></div>
+                <div id="questionNav">
+                    <button onclick="showQuestion(0)">1</button>
+                    <button onclick="showQuestion(1)">2</button>
+                </div>
             </div>
         </main>
     
