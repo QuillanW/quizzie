@@ -19,7 +19,7 @@ function showQuestion(i) {
             <button onclick="fillAnswer(${i}, 'question${i}')">submit</button>
         `
     }
-    document.getElementById('answers').innerHTML = inerHTML
+    document.getElementById('answers').innerHTML = inerHTML;
 }
 
 let givenAnswers = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
@@ -30,7 +30,13 @@ function fillAnswer(i, a) {
 }
 function checkAnswers() {
     for (i in questionOrder) {
-        console.log(checkAnswer(i))
+        if (checkAnswer(i) == true) {
+            console.log(true);
+            document.getElementById(`buttonQuestion${Number(i) + 1}`).classList.add('right');
+        } else {
+            console.log(false)
+            document.getElementById(`buttonQuestion${Number(i) + 1}`).classList.add('wrong');
+        }
     }
 }
 
@@ -43,6 +49,5 @@ function checkAnswer(i) {
         qType == 'number' && answer == Number(givnAns) ||
         qType == 'text' && answer.indexOf(givnAns) != -1
         ) { return true }
-    // else if (qType == 'text' && answer.indexOf(givenAnswers[i]) != -1) { return true }
     else { return false }
 }

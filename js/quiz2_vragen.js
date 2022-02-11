@@ -1,7 +1,7 @@
 const q1 = {
     type: 'multipleChoice',
-    question: 'This is the first question',
-    options: ['option 1', 'option 2', 'option 3', 'option 4'],
+    question: 'Is this the first question?',
+    options: ['I guess', 'No', 'Maby, maby not', 'Probably'],
     answer: 2
 }
 const q2 = {
