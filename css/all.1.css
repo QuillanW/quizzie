@@ -1,4 +1,7 @@
 :root {
+    --maxWidth-main: 900pt;
+    --maxWidth-nav: 200pt;
+
     --color-header: white;
     --color-body: grey;
     --color-contentBox: white;
@@ -11,60 +14,65 @@
 
     --padding: 15pt;
     --borderRadius: 5pt;
-    --boxshadow-contentBox: 5pt;
-    --boxshadow-nav: 5pt;
+
+    /* --boxshadow-contentBox-width: 0pt;
+    --boxshadow-contentBox-color: #F2ECFF;
+    --boxshadow-nav-widht: 0pt;
+    --boxshadow-nav-color: #F2ECFF; */
 }
 
 *:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-titel-family); }
 *:not(h1, h2, h3, h4, h5, h6) { font-family: var(--font-tekst-family); }
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
 }
-body {
-    background-color: var(--color-body);
-    min-height: 100vh;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
+
+
 header {
     background-color: var(--color-header);
-    /* border-bottom: 1pt solid black; */
+}
+header img {
+    max-width: var(--maxWidth-nav);
+}
+
+
+body {
+    background-color: var(--color-body);
+    min-height: 300vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 nav {
     background-color: var(--color-header);
     border-radius: 0 0 var(--borderRadius) var(--borderRadius);
-    border: 1pt solid black;
-    border-top-width: 0pt;
+    max-width: var(--maxWidth-nav);
 
     text-align: center;
     position: sticky;
-    flex: 0 0 15rem;
     top: 0;
 }
 nav a {display: block; border-bottom: .3pt solid black;}
+
 main {
     display: grid;
     gap: var(--padding);
     padding-top: var(--padding);
-    flex: 1 0 25rem;
+    max-width: var(--maxWidth-main);
+    margin: auto;
 }
+main *:is(h1, h2, h3, h4, h5, h6, .title) { color: var(--color-titel); }
+main *:not(h1, h2, h3, h4, h5, h6, .title) { color: var(--color-tekst); }
 .contentBox {
     background-color: var(--color-contentBox);
     border-radius: var(--borderRadius);
     padding: var(--padding);
+    box-shadow: 0 0 var(--boxshadow-contentBox-width) var(--boxshadow-contentBox-color);
 }
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
-}
-.displayFlex {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: var(--padding);
-    padding-top: 0;
-    gap: var(--padding);
 }
 
 input, button, textarea, select { font: inherit; }

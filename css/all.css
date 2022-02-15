@@ -1,57 +1,77 @@
 :root {
+    --maxWidth-main: 900pt;
+
+    --color-header: white;
     --color-body: grey;
     --color-contentBox: white;
+
     --color-titel: black;
     --color-tekst: black;
 
     --font-titel-family: serif;
     --font-tekst-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    --padding: 10pt;
+    --padding: 15pt;
     --borderRadius: 5pt;
+    --boxshadow-contentBox: 5pt;
+    --boxshadow-nav: 5pt;
 }
 
+*:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-titel-family); }
+*:not(h1, h2, h3, h4, h5, h6) { font-family: var(--font-tekst-family); }
 * {
   box-sizing: border-box;
   margin: 0;
 }
+header {
+    background-color: var(--color-header);
+    /* border-bottom: 1pt solid black; */
+}
 body {
     background-color: var(--color-body);
-    padding: var(--padding);
     min-height: 100vh;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
-
-nav a {display: block;}
 nav {
-    background-color: var(--color-contentBox);
-}
+    background-color: var(--color-header);
+    border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+    border: 1pt solid black;
+    border-top-width: 0pt;
 
-.hidden {display: none;}
+    text-align: center;
+    position: sticky;
+    flex: 0 0 15rem;
+    top: 0;
+}
+nav a {display: block; border-bottom: .3pt solid black;}
 
 main {
-    grid-column-start: 0;
-    grid-column-end: 2;
-
     display: grid;
     gap: var(--padding);
-}
-.displayGrid {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr auto auto;
-    gap: var(--padding);
+    padding-top: var(--padding);
+    max-width: var(--maxWidth-main);
+    margin: auto;
+    flex: 1 0;
 }
 .contentBox {
     background-color: var(--color-contentBox);
     border-radius: var(--borderRadius);
     padding: var(--padding);
 }
-
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
 }
+.displayFlex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: var(--padding);
+    padding-top: 0;
+    gap: var(--padding);
+}
+
 input, button, textarea, select { font: inherit; }
 p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+.hidden {display: none;}
