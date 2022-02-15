@@ -7,11 +7,12 @@
     --color-tekst: black;
 
     --font-titel-family: serif;
-    /* --font-titel-family: 'Courier New', Courier, monospace; */
     --font-tekst-family: Verdana, Geneva, Tahoma, sans-serif;
 
     --padding: 15pt;
     --borderRadius: 5pt;
+    --boxshadow-contentBox: 5pt;
+    --boxshadow-nav: 5pt;
 }
 
 *:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-titel-family); }
@@ -28,11 +29,11 @@ body {
 }
 header {
     background-color: var(--color-header);
+    /* border-bottom: 1pt solid black; */
 }
 nav {
     background-color: var(--color-header);
     border-radius: 0 0 var(--borderRadius) var(--borderRadius);
-
     border: 1pt solid black;
     border-top-width: 0pt;
 
