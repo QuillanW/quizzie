@@ -2,7 +2,7 @@
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    border: 1pt solid black;
+    /* border: 1pt solid black; */
  }
  #questionNav .active {
      background-color: black;

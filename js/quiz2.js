@@ -32,10 +32,10 @@ function checkAnswers() {
     for (i in questionOrder) {
         if (checkAnswer(i) == true) {
             console.log(true);
-            document.getElementById(`buttonQuestion${Number(i) + 1}`).classList.add('right');
+            document.getElementById(`buttonQuestion${i}`).classList.add('right');
         } else {
             console.log(false)
-            document.getElementById(`buttonQuestion${Number(i) + 1}`).classList.add('wrong');
+            document.getElementById(`buttonQuestion${i}`).classList.add('wrong');
         }
     }
 }
