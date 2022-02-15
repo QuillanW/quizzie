@@ -7,7 +7,6 @@ function select(selected) {
 }
 
 let answers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-let total = 0;
 
 function answer(correct) {
   answered = (event.target.parentElement.parentElement.id).replace("box","") - 1;
@@ -20,19 +19,21 @@ function answer(correct) {
   } else {
     console.log('ERROR')
   }
+  for (let i = 0; i < 10; i++) {
+    var total =+ answers[i];
+    console.log(total);
+  }
 }
 
 function finish() {
   if (window.confirm("Weet je zeker dat je de quiz wilt beëindigen?")) {
     window.location.replace("result.html")
   }
-  for (let i = 0; i < 10; i++) {
-    total = total += answered[i];
-}
-localStorage.setItem('answered', total)
+  localStorage.setItem('answered', total)
 }
 
 function result() {
-  var results = localStorage.getItem('answered')
-  document.getElementById('result').value = results + "/10";
+  var result = localStorage.getItem('answered')
+  document.getElementById('result').value = result + "/10";
+  console.log(result)
 }
