@@ -15,10 +15,10 @@
     --padding: 15pt;
     --borderRadius: 5pt;
 
-    /* --boxshadow-contentBox-width: 0pt;
-    --boxshadow-contentBox-color: #F2ECFF;
-    --boxshadow-nav-widht: 0pt;
-    --boxshadow-nav-color: #F2ECFF; */
+    --boxshadow-contentBox-width: 1px;
+    --boxshadow-contentBox-color: darkgray;
+    --boxshadow-nav-width: 3px;
+    --boxshadow-nav-color: grey;
 }
 
 *:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-titel-family); }
@@ -29,14 +29,12 @@
     scroll-behavior: smooth;
 }
 
-
 header {
     background-color: var(--color-header);
 }
 header img {
     max-width: var(--maxWidth-nav);
 }
-
 
 body {
     background-color: var(--color-body);
@@ -48,6 +46,7 @@ nav {
     background-color: var(--color-header);
     border-radius: 0 0 var(--borderRadius) var(--borderRadius);
     max-width: var(--maxWidth-nav);
+    box-shadow: 0px var(--boxshadow-nav-width) var(--boxshadow-nav-width) 0px var(--boxshadow-nav-color);
 
     text-align: center;
     position: sticky;
