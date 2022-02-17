@@ -8,5 +8,5 @@
      background-color: black;
      color: white;
 }
-#questionNav .wrong { background-color: red; }
-#questionNav .right { background-color: green; }
+.wrong { background-color: red; }
+.right { background-color: green; }
