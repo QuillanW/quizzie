@@ -23,6 +23,9 @@ function answer(correct) {
     var total =+ answers[i];
     console.log(total);
   }
+  button = 'btn' + (answered + 1)
+  console.log(document.getElementById(button))
+  document.getElementById(button).classList.add('answered')
 }
 
 function finish() {
