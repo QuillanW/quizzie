@@ -19,24 +19,28 @@ function answer(correct) {
   } else {
     console.log('ERROR')
   }
-  for (let i = 0; i < 10; i++) {
-    var total =+ answers[i];
-    console.log(total);
-  }
   button = 'btn' + (answered + 1)
-  console.log(document.getElementById(button))
   document.getElementById(button).classList.add('answered')
 }
 
 function finish() {
   if (window.confirm("Weet je zeker dat je de quiz wilt beëindigen?")) {
-    window.location.replace("result.html")
+    result()
   }
-  localStorage.setItem('answered', total)
 }
 
 function result() {
-  var result = localStorage.getItem('answered')
-  document.getElementById('result').value = result + "/10";
-  console.log(result)
+  document.getElementById('row').style.display = 'none'
+  document.getElementById('questionSelect').style.display = 'none'
+  document.getElementById('resultPage').style.display = 'block'
+  let score = 0;
+  for (let i = 0; i < 10; i++) {
+    score = score + answers[i]
+  }
+  document.getElementById('result').innerHTML = score + "/10";
+  console.log(score)
+}
+
+function restart() {
+  document.location.reload()
 }

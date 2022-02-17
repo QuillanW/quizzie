@@ -27,7 +27,7 @@ body {
     margin-left: 10vw;
 }
 
-.select1, .select2 {
+.select1, .select2, .restart {
     transition: 0.1s;
     display: block;
     border: none;
@@ -46,7 +46,7 @@ body {
     width: 100px;
 }
 
-.select1:hover, .select2:hover {
+.select1:hover, .select2:hover, .restart:hover {
     background-color: lightgrey;
     cursor: pointer;
 }
@@ -77,4 +77,9 @@ body {
 
 .answered {
     background-color: darkcyan;
+}
+
+#resultPage {
+    display: none;
+    text-align: center;
 }
