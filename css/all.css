@@ -3,6 +3,7 @@
     --maxWidth-nav: 200pt;
 
     --color-header: white;
+    --color-navIcon: black;
     --color-body: grey;
     --color-contentBox: white;
 
@@ -13,6 +14,7 @@
     --font-tekst-family: Verdana, Geneva, Tahoma, sans-serif;
 
     --padding: 15pt;
+    --padding-header: calc(var(--padding)*2);
     --borderRadius: 5pt;
 
     --boxshadow-contentBox-width: 1px;
@@ -30,10 +32,17 @@
 }
 
 header {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
     background-color: var(--color-header);
+    padding: var(--padding);
+    gap: var(--padding-header);
 }
-header img {
-    max-width: var(--maxWidth-nav);
+header img { max-width: calc(var(--maxWidth-nav) - var(--padding-header)); }
+header div {
+    margin: auto;
+    font-size: 72pt;
 }
 
 body {
@@ -42,14 +51,27 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
+
 nav {
+    display: inline-block;
     position: sticky;
     top: var(--padding);
     margin: var(--padding);
 }
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-navIcon);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 { transform: rotate(-45deg) translate(-9px, 6px); }
+.change .bar2 { opacity: 0; }
+.change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
 div#mainNav {
     background-color: var(--color-header);
     border-radius: var(--borderRadius);
+    min-width: max-content;
     max-width: var(--maxWidth-nav);
     box-shadow: 0px var(--boxshadow-nav-width) var(--boxshadow-nav-width) 0px var(--boxshadow-nav-color);
 
@@ -59,18 +81,6 @@ div#mainNav {
     text-align: center;
     transition: 0.4s;
 }
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-.change .bar1 { transform: rotate(-45deg) translate(-9px, 6px); }
-.change .bar2 { opacity: 0; }
-.change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
-
 nav a {
     display: block;
     padding: 5pt 10pt;

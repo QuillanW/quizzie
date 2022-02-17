@@ -1,4 +1,4 @@
-let questionOrder = [0, 1, 2, 3];
+let questionOrder = [7, 1, 2, 3, 4, 5, 6, 0, 8, 9];
 
 showQuestion(0);
 function showQuestion(i) {
@@ -9,34 +9,29 @@ function showQuestion(i) {
     let inerHTML = '';
     if (qType == 'multipleChoice') {
         for (q in question['options']) {
-            inerHTML += `
-            <button onclick="fillAnswer(${i}, ${q})" class="option">${question['options'][q]}</button>
-            `
+            inerHTML += `<button onclick="fillAnswer(${i}, ${q})" class="option">${question['options'][q]}</button>`
         }
-    } else if (qType == 'text' || qType == 'number') {
-        inerHTML = `
-            <input type="${qType}" id="question${i}">
-            <button onclick="fillAnswer(${i}, 'question${i}')">submit</button>
-        `
+    }
+    else if (qType == 'text' || qType == 'number') {
+        inerHTML = `<input type="${qType}" id="question${i}" onchange="fillAnswer(${i}, 'question${i}')">`
     }
     document.getElementById('answers').innerHTML = inerHTML;
+    for (q in questionOrder) { document.getElementById(`buttonQuestion${q}`).classList.remove('active'); }
+    document.getElementById(`buttonQuestion${i}`).classList.add('active')
 }
 
 let givenAnswers = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
 function fillAnswer(i, a) {
     if (isNaN(a)) { a = document.getElementById(a).value.toLowerCase(); }
     givenAnswers[i] = a;
-    console.log(givenAnswers)
+    document.getElementById(`buttonQuestion${i}`).classList.add('filled')
 }
 function checkAnswers() {
     for (i in questionOrder) {
-        if (checkAnswer(i) == true) {
-            console.log(true);
-            document.getElementById(`buttonQuestion${i}`).classList.add('right');
-        } else {
-            console.log(false)
-            document.getElementById(`buttonQuestion${i}`).classList.add('wrong');
-        }
+        let button = document.getElementById(`buttonQuestion${i}`);
+        button.classList.remove('filled', 'right', 'wrong');
+        if (checkAnswer(i) == true) { button.classList.add('right'); }
+        else { button.classList.add('wrong'); }
     }
 }
 

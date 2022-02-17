@@ -2,11 +2,9 @@
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    /* border: 1pt solid black; */
+    border: 1pt solid black;
  }
- #questionNav .active {
-     background-color: black;
-     color: white;
-}
-.wrong { background-color: red; }
-.right { background-color: green; }
+#questionNav button.active {border: 1pt solid blue;}
+#questionNav button.wrong { background-color: red; }
+#questionNav button.right { background-color: green; }
+#questionNav button.filled { background-color: blue; }
