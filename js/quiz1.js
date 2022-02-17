@@ -26,7 +26,9 @@ function finish() {
 }
 
 function result() {
-  document.getElementById('row').style.display = 'none'
+  for (let i = 1; i < 11; i++) {
+    document.getElementById('box'+i).style.display = 'none'
+  }
   document.getElementById('questionSelect').style.display = 'none'
   document.getElementById('resultPage').style.display = 'block'
   let score = 0;
