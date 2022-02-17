@@ -47,17 +47,18 @@ nav {
     border-radius: 0 0 var(--borderRadius) var(--borderRadius);
     max-width: var(--maxWidth-nav);
     box-shadow: 0px var(--boxshadow-nav-width) var(--boxshadow-nav-width) 0px var(--boxshadow-nav-color);
-
+    /* margin-left: var(--padding); */
+    margin-right: var(--padding);
     text-align: center;
     position: sticky;
-    top: 0;
+    top: 5pt;
 }
 nav a {display: block; border-bottom: .3pt solid black;}
 
 main {
     display: grid;
     gap: var(--padding);
-    padding-top: var(--padding);
+    padding: var(--padding);
     max-width: var(--maxWidth-main);
     margin: auto;
 }
@@ -68,7 +69,10 @@ main *:not(h1, h2, h3, h4, h5, h6, .title) { color: var(--color-tekst); }
     border-radius: var(--borderRadius);
     padding: var(--padding);
     box-shadow: 0 0 var(--boxshadow-contentBox-width) var(--boxshadow-contentBox-color);
+
+    scroll-padding-top: var(--padding);
 }
+
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
