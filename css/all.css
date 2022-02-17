@@ -44,18 +44,20 @@ body {
 }
 nav {
     position: sticky;
-    top: 5pt;
+    top: var(--padding);
+    margin: var(--padding);
 }
 div#mainNav {
     background-color: var(--color-header);
     border-radius: var(--borderRadius);
     max-width: var(--maxWidth-nav);
     box-shadow: 0px var(--boxshadow-nav-width) var(--boxshadow-nav-width) 0px var(--boxshadow-nav-color);
-    margin: var(--padding);
 
     position: absolute;
-    margin-top: 10pt;
+    margin-top: 35px;
+    margin-left: calc(35px/2);
     text-align: center;
+    transition: 0.4s;
 }
 
 .bar1, .bar2, .bar3 {
@@ -78,6 +80,7 @@ main {
     display: grid;
     gap: var(--padding);
     padding: var(--padding);
+    padding-top: 0;
     max-width: var(--maxWidth-main);
     margin: auto;
 }
@@ -99,4 +102,4 @@ img, picture, video, canvas, svg {
 
 input, button, textarea, select { font: inherit; }
 p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
-.hidden {display: none;}
+.hidden { opacity: 0; }
