@@ -1,39 +1,40 @@
 body {
-    overflow-x: hidden;
-    text-align: center;
+    /* overflow-x: hidden; */
+    /* text-align: center; */
 }
 
 #row {
     display: block;
     height: 700px;
     width: max-content;
-    margin-left: 9.5vw;
+    /* margin-left: 9.5vw; */
 }
 
 .question {
-    display: inline-block;
-    margin: 50px 1vw 0 1vw;
-    height: 600px;
-    width: 78vw;
-    border: solid black 3px;
-    text-align: center;
-    background: white;
+    /* display: inline-block; */
+    /* margin: 50px 1vw 0 1vw; */
+    /* height: 600px; */
+    /* width: 78vw; */
+    /* width: var(--maxWidth-main); */
+    /* border: solid black 3px; */
+    /* text-align: center; */
+    /* background: white; */
 }
 
 #questionSelect {
-    display: block;
+    /* display: block; */
     text-align: center;
-    width: 80vw;
-    margin-left: 10vw;
+    /* width: 80vw; */
+    /* margin-left: 10vw; */
 }
 
 .select1, .select2, .restart {
     transition: 0.1s;
-    display: block;
+    /* display: block; */
     border: none;
     height: 30px;
     border-radius: 25px;
-    float: left;
+    /* float: left; */
     margin: 5px;
     background-color: darkgrey;
 }
@@ -59,16 +60,19 @@ body {
 #answers {
     width: 100%;
     height: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .answerButton {
     transition: 0.1s;
     background: darkgrey;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 10px;
-    width: 40%;
+    /* width: 40%; */
     height: 20vh;
-    border: none;
+    /* border: none; */
 }
 
 .answerButton:hover {
