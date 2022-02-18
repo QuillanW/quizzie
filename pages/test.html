@@ -11,18 +11,22 @@
 <body>
 
 <header>
-    <img src="../media/logo.png" alt="logo">
-    <div role="site-heading">Quizzy</div>
+    <div>
+        <img src="../media/logo.png" alt="logo">
+        <div role="site-heading">Quizzy</div>
+    </div>
 </header>
 
 <nav>
-    <div id="mainNav">
+    <div id="mainNav" class="hidden">
 
         <div name="site-navigation">
             <a href="../">HOME</a>
             <a href="quiz1.html">Quizz 1</a>
             <a href="quiz2.html">Quizz 2</a>
         </div>
+
+        <div class="divider"></div>
 
         <div name="in-page-navigation">
             <a href="#1eTitle">1</a>
@@ -32,7 +36,7 @@
 
     </div>
 
-    <div id="mainNavToggle" class="change" onclick="toggleClass('mainNavToggle', 'change'); toggleClass('mainNav','hidden')">
+    <div id="mainNavToggle" onclick="toggleClass('mainNavToggle', 'change'); toggleClass('mainNav','hidden')">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
