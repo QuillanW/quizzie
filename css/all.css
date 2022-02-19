@@ -1,8 +1,4 @@
 :root {
-    --color-1: black;
-    --color-2: white;
-    --color-3: red;
-
 /* Header */
     --header-bg-color: white;
     --header-boxshadow-width: 5pt;
@@ -70,6 +66,29 @@
     --contentbox-boxshadow-width: 5pt;
     --contentbox-boxshadow-color: black;
 }
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --header-bg-color: black;
+        --header-boxshadow-color: white;
+        --header-font-color: white;
+
+        --nav-bg-color: black;
+        --nav-boxshadow-color: white;
+        --nav-a-font-color: white;
+        --nav-a-hover-line-color: red;
+        --nav-devider-color: white;
+        --nav-icon-bg-color: white;
+
+        --body-bg-color: grey;
+
+        --main-plain-font-color: white;
+        --main-mainTitle-font-color: white;
+        --main-subTitle2-font-color: blue;
+        --main-subTitle3-font-color: red;
+
+        --contentbox-bg-color: white;
+    }
+} */
 
 * {
     box-sizing: border-box;
