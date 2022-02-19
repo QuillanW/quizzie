@@ -65,6 +65,11 @@
     --contentbox-padding: 15pt;
     --contentbox-boxshadow-width: 5pt;
     --contentbox-boxshadow-color: black;
+
+/* Footer */
+    --footer-bg-color: white;
+    --footer-boxshadow-width: 5pt;
+    --footer-boxshadow-color: black;
 }
 /* @media (prefers-color-scheme: dark) {
     :root {
@@ -86,7 +91,10 @@
         --main-subTitle2-font-color: blue;
         --main-subTitle3-font-color: red;
 
-        --contentbox-bg-color: white;
+        --contentbox-bg-color: black;
+
+        --footer-bg-color: black;
+        --footer-boxshadow-color: white;
     }
 } */
 
@@ -125,7 +133,7 @@ header img {
 
 body {
     background-color: var(--body-bg-color);
-    min-height: 300vh;
+    min-height: 100vh;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
@@ -231,4 +239,9 @@ main h3 {
     box-shadow: 0 0 var(--contentbox-boxshadow-width) var(--contentbox-boxshadow-color);
 
     scroll-padding-top: var(--padding);
+}
+
+footer {
+    background-color: var(--header-bg-color);
+    box-shadow: 0 0 var(--footer-boxshadow-width) var(--footer-boxshadow-color);
 }
