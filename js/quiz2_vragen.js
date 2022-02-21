@@ -1,4 +1,4 @@
-const questionTypes = ['multipleChoice', 'text', 'number']
+// const questionTypes = ['multipleChoice', 'text', 'number']
 const questions = [
     {
         type: 'multipleChoice',
