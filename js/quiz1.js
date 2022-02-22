@@ -11,7 +11,7 @@ let answers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 function makeQuestions() {
   var container = document.getElementById('questions');
-  for (let i = 1; i < 11; i++) {
+  for (let i = 1; i < (questions.length + 1); i++) {
     var newQuestion = document.createElement('div');
     newQuestion.id = 'box' + i;
     newQuestion.classList.add('contentBox');
