@@ -22,23 +22,29 @@
     </header>
 
     <nav>
-        <div id="mainNav">
-
-            <div role="site-navigation">
-                <a href="">HOME</a>
-                <a href="">Quizz 1</a>
+        <div id="mainNav" class="closed">
+    
+            <div>
+                <a href="../">HOME</a>
+                <a href="quiz1.html">Quizz 1</a>
                 <a href="quiz2.html">Quizz 2</a>
             </div>
-
-            <div role="in-page-navigation">
+    
+            <div class="divider"></div>
+    
+            <div>
                 <a href="#1eTitle">1</a>
                 <a href="#2eTitle">2</a>
-                <a href="">3</a>
+                <a href="#3eTitle">3</a>
             </div>
-
+    
         </div>
-
-        <p id="mainNavToggle" onclick="toggleNav('mainNav','mainNavToggle')">hide</p>
+    
+        <div id="mainNavToggle" onclick="toggleClass('mainNavToggle', 'change'); toggleClass('mainNav','closed')">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </nav>
 
     <main>
