@@ -1,5 +1,6 @@
 :root {
     --color-0: #e9fff9;
+    --color-0-1: #EBFCFF;
     --color-1: #9ed8db;
     --color-2: #467599;
     --color-3: #1d3354;
@@ -16,7 +17,7 @@
     --header-font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 /* Nav */
-    --nav-maxWidht: 200pt;
+    --nav-maxWidht: 100pt;
     --nav-borderRadius: 5pt;
     --nav-animation-duration: 0.3s;
 
@@ -25,13 +26,13 @@
     --nav-boxshadow-width: 5pt;
     --nav-boxshadow-color: var(--color-3);
 
-    --nav-a-padding: 5pt 10pt;
+    --nav-a-padding: 8pt 10pt;
     --nav-a-font-color: var(--color-3);
     --nav-a-font-size: 14pt;
     --nav-a-font-family: Verdana, Geneva, Tahoma, sans-serif;
     --nav-a-hover-line-color: var(--color-4);
 
-    --nav-devider-color: var(--color-3);
+    --nav-devider-color: var(--color-4);
     --nav-devider-height: 1px;
     --nav-devider-margin-inline: 7pt;
     --nav-devider-margin-block: 3pt;
@@ -62,7 +63,12 @@
     --main-subTitle3-font-color: var(--color-4);
     --main-subTitle3-font-size: 17pt;
     --main-subTitle3-font-family: serif;
-    --main-subTitle3-marginTop: 7pt;
+    --main-subTitle3-marginTop: 8pt;
+    
+    --main-subTitle4-font-color: var(--color-3);
+    --main-subTitle4-font-size: 14pt;
+    --main-subTitle4-font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --main-subTitle4-marginTop: 8pt;
 
 /* .contentbox */
     --contentbox-bg-color: var(--color-1);
@@ -70,9 +76,22 @@
     --contentbox-padding: 15pt;
     --contentbox-boxshadow-width: 5pt;
     --contentbox-boxshadow-color: var(--color-3);
+    --contentbox-p-p-margin-top: 8pt;
+
+/* Quizz */
+    --quiz-option-bg-color: var(--color-3);
+    --quiz-option-hover-bg-color: var(--color-0);
+    --quiz-option-borderRadius: 5pt;
+    --quiz-option-boxshadow-width: 3pt;
+    --quiz-option-boxshadow-color: var(--color-1);
+
+    --quiz-color-active: #1d3354;
+    --quiz-color-filled: #0082CB;
+    --quiz-color-chosen: #467599;
+    --quiz-color-right: #5B8300;
+    --quiz-color-wrong: #d64045;
 
 /* Footer */
-    
     --footer-bg-color: var(--color-1);
     --footer-boxshadow-width: 5pt;
     --footer-boxshadow-color: var(--color-3);
@@ -80,15 +99,15 @@
 /* @media (prefers-color-scheme: dark) {
     :root {
         --header-bg-color: var(--color-3);
-        --header-boxshadow-color: var(--color-1);
+        --header-boxshadow-color: var(--color-3);
         --header-font-color: var(--color-1);
 
         --nav-bg-color: var(--color-3);
         --nav-boxshadow-color: var(--color-1);
         --nav-a-font-color: var(--color-1);
         --nav-a-hover-line-color: var(--color-4);
-        --nav-devider-color: var(--color-1);
-        --nav-icon-color: var(--color-1);
+        --nav-devider-color: var(--color-4);
+        --nav-icon-color: var(--color-4);
         --nav-icon-bg-color: var(--color-3);
 
         --body-bg-color: var(--color-2);
@@ -99,7 +118,7 @@
         --main-subTitle3-font-color: var(--color-4);
 
         --contentbox-bg-color: var(--color-3);
-        --contentbox-boxshadow-color: var(--color-1);
+        --contentbox-boxshadow-color: var(--color-3);
 
         --footer-bg-color: var(--color-3);
         --footer-boxshadow-color: var(--color-1);
@@ -168,8 +187,9 @@ nav {
 .change .bar2 { opacity: 0; }
 .change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
 div#mainNav {
-    min-width: max-content;
-    max-width: var(--nav-maxWidht);
+    max-width: calc(min-content + 100px);
+    max-height: calc(90vh - 50px);
+    overflow: auto;
     border-radius: var(--nav-borderRadius);
     background-color: var(--nav-bg-color);
     box-shadow: 0 0 var(--nav-boxshadow-width) var(--nav-boxshadow-color);
@@ -239,6 +259,12 @@ main h3 {
     font-family: var(--main-subTitle3-font-family);
     margin-top: var(--main-subTitle3-marginTop);
 }
+main h4 {
+    color: var(--main-subTitle4-font-color);
+    font-size: var(--main-subTitle4-font-size);
+    font-family: var(--main-subTitle4-font-family);
+    margin-top: var(--main-subTitle4-marginTop);
+}
 
 .contentBox {
     background-color: var(--contentbox-bg-color);
@@ -247,6 +273,9 @@ main h3 {
     box-shadow: 0 0 var(--contentbox-boxshadow-width) var(--contentbox-boxshadow-color);
 
     scroll-padding-top: var(--padding);
+}
+.contentBox p + p {
+    margin-top: var(--contentbox-p-p-margin-top);
 }
 
 footer {

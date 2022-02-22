@@ -1,10 +1,25 @@
-#questionNav button {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    border: 1pt solid black;
- }
-#questionNav button.active {border: 1pt solid blue;}
-#questionNav button.wrong { background-color: red; }
-#questionNav button.right { background-color: green; }
-#questionNav button.filled { background-color: blue; }
+#answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--main-padding-and-gap);
+    margin-block: var(--main-padding-and-gap);
+}
+#answers * {
+    border: none;
+    background-color: var(--quiz-option-bg-color);
+    border-radius: var(--quiz-option-borderRadius);
+    box-shadow: 0 0 var(--quiz-option-boxshadow-width) var(--quiz-option-boxshadow-color) inset;
+}
+#answers :hover {
+    background-color: var(--quiz-option-hover-bg-color);
+}
+#answers button.chosen { background-color: var(--quiz-color-chosen); }
+
+#questionNav {}
+#questionNav button.active {border: 1pt solid var(--quiz-color-active);}
+#questionNav button.wrong { background-color:  var(--quiz-color-wrong); }
+#questionNav button.right { background-color: var(--quiz-color-right); }
+#questionNav button.filled { background-color: var(--quiz-color-filled); }
+
+#check_answers {
+}

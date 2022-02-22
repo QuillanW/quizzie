@@ -22,7 +22,7 @@ const questions = [
     },
     {
         type: 'multipleChoice',
-        question: 'Wat betekend de reed/gele vlag?',
+        question: 'Wat betekend de rood/gele vlag?',
         options: [
             'Verboden te zwemmen!',
             'Bewaakt gebied.',
@@ -47,13 +47,13 @@ const questions = [
         options: [
             'Plaats, aantal slachttoffers, wat is het letsel van het slachttoffer en gegevens van de melder.',
             'Geef plaats door, aard van het ongeval, aantal slachttoffers, is er sprake van letsel en je laat weten hou de melder bereikbaar is.',
-            'Plaats, waar het is gebeurd, hoeveel slachttofers, wie je nodig hebt en hoe lat het is.',
+            'Plaats, waar het is gebeurd, hoeveel slachttofers, wie je nodig hebt en hoe laat het is.',
         ],
         answer: 1
     },
     {
         type: 'multipleChoice',
-        question: 'WAt is het landelijke alarmnummer?',
+        question: 'Wat is het landelijke alarmnummer?',
         options: [
             '119',
             '112',
