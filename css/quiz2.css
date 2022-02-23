@@ -1,6 +1,5 @@
 #answers {
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(auto-fit, minmax(max(230px, 45%), 1fr));
     gap: var(--main-padding-and-gap);
     margin-block: var(--main-padding-and-gap);
@@ -17,7 +16,6 @@
 #answers :hover:not(.chosen) { background-color: var(--quiz-option-hover-bg-color); }
 
 #questionNav button.active { --quiz-questionNav-boxshadow-color: var(--quiz-active-color); }
-
 #questionNav button.filled { background-color: var(--quiz-filled-color); }
 #questionNav button.right { background-color: var(--quiz-right-color); }
 #questionNav button.wrong { background-color:  var(--quiz-wrong-color); }
@@ -28,7 +26,6 @@
 #questionNav button.wrong:hover { background-color: var(--quiz-wrong-hover-color) }
 
 #questionNav button {
-    box-sizing: border-box;
     border: none;
     padding-inline: 10pt;
     min-width: 40pt;
