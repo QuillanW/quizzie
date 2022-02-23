@@ -104,13 +104,13 @@
     --quiz-questionNav-boxshadow-color: var(--color-1);
 
     --quiz-active-color: var(--color-3);
-    --quiz-filled-color: var(--color-3-2);
-    --quiz-filled-hover-color: ;
+    --quiz-filled-color: var(--color-2-2);
+    --quiz-filled-hover-color: var(--color-2);
 
     --quiz-right-color: #5B8300;
-    --quiz-right-hover-color: ;
+    --quiz-right-hover-color: #648F00;
     --quiz-wrong-color: #d64045;
-    --quiz-wrong-hover-color: ;
+    --quiz-wrong-hover-color: #E34449;
 
 /* Footer */
     --footer-bg-color: var(--color-1);
@@ -208,7 +208,7 @@ nav {
 .change .bar2 { opacity: 0; }
 .change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
 div#mainNav {
-    max-width: calc(min-content + 100px);
+    /* max-width: calc(min-content + 100px); */
     max-height: calc(90vh - 50px);
     overflow: auto;
     border-radius: var(--nav-borderRadius);

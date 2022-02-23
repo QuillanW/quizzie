@@ -1,4 +1,3 @@
-// const questionTypes = ['multipleChoice', 'text', 'number']
 const questions = [
     {
         type: 'multipleChoice',
@@ -52,14 +51,9 @@ const questions = [
         answer: 1
     },
     {
-        type: 'multipleChoice',
+        type: 'number',
         question: 'Wat is het landelijke alarmnummer?',
-        options: [
-            '119',
-            '112',
-            '0900-8844',
-        ],
-        answer: 1
+        answer: 112
     },
     {
         type: 'multipleChoice',

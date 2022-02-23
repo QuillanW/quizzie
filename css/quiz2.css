@@ -16,7 +16,6 @@
 #answers button.chosen { background-color: var(--quiz-option-chosen-bg-color); }
 #answers :hover:not(.chosen) { background-color: var(--quiz-option-hover-bg-color); }
 
-
 #questionNav button.active { --quiz-questionNav-boxshadow-color: var(--quiz-active-color); }
 
 #questionNav button.filled { background-color: var(--quiz-filled-color); }
@@ -24,6 +23,7 @@
 #questionNav button.wrong { background-color:  var(--quiz-wrong-color); }
 
 #questionNav button:hover { background-color: var(--quiz-option-hover-bg-color); }
+#questionNav button.filled:hover { background-color: var(--quiz-filled-hover-color); }
 #questionNav button.right:hover { background-color: var(--quiz-right-hover-color) }
 #questionNav button.wrong:hover { background-color: var(--quiz-wrong-hover-color) }
 
