@@ -1,25 +1,39 @@
 #answers {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(max(230px, 45%), 1fr));
     gap: var(--main-padding-and-gap);
     margin-block: var(--main-padding-and-gap);
 }
 #answers * {
     border: none;
+    color: var(--quiz-option-font-color);
     background-color: var(--quiz-option-bg-color);
+    padding: 10pt;
     border-radius: var(--quiz-option-borderRadius);
     box-shadow: 0 0 var(--quiz-option-boxshadow-width) var(--quiz-option-boxshadow-color) inset;
 }
-#answers :hover {
-    background-color: var(--quiz-option-hover-bg-color);
-}
-#answers button.chosen { background-color: var(--quiz-color-chosen); }
+#answers button.chosen { background-color: var(--quiz-option-chosen-bg-color); }
+#answers :hover:not(.chosen) { background-color: var(--quiz-option-hover-bg-color); }
 
-#questionNav {}
-#questionNav button.active {border: 1pt solid var(--quiz-color-active);}
-#questionNav button.wrong { background-color:  var(--quiz-color-wrong); }
-#questionNav button.right { background-color: var(--quiz-color-right); }
-#questionNav button.filled { background-color: var(--quiz-color-filled); }
 
-#check_answers {
+#questionNav button.active { --quiz-questionNav-boxshadow-color: var(--quiz-active-color); }
+
+#questionNav button.filled { background-color: var(--quiz-filled-color); }
+#questionNav button.right { background-color: var(--quiz-right-color); }
+#questionNav button.wrong { background-color:  var(--quiz-wrong-color); }
+
+#questionNav button:hover { background-color: var(--quiz-option-hover-bg-color); }
+#questionNav button.right:hover { background-color: var(--quiz-right-hover-color) }
+#questionNav button.wrong:hover { background-color: var(--quiz-wrong-hover-color) }
+
+#questionNav button {
+    box-sizing: border-box;
+    border: none;
+    padding-inline: 10pt;
+    min-width: 40pt;
+    color: var(--quiz-option-font-color);
+    background-color: var(--quiz-option-bg-color);
+    box-shadow: 0 0 var(--quiz-questionNav-boxshadow-width) var(--quiz-questionNav-boxshadow-color) inset;
+    border-radius: var(--quiz-questionNav-borderRadius);
 }
