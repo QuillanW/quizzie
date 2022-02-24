@@ -131,28 +131,29 @@
         --nav-icon-color: var(--color-4);
         --nav-icon-bg-color: var(--color-3);
 
-        --body-bg-color: var(--color-2);
+        --body-bg-color: var(--color-2-2);
 
         --main-plain-font-color: var(--color-1);
         --main-mainTitle-font-color: var(--color-3);
         --main-subTitle2-font-color: var(--color-4);
         --main-subTitle3-font-color: var(--color-4);
+        --main-subTitle4-font-color: var(--color-1);
 
         --contentbox-bg-color: var(--color-3);
         --contentbox-boxshadow-color: var(--color-3);
 
-        --quiz-option-bg-color: var(--color-2);
-        --quiz-option-hover-bg-color: var(--color-2-1);
-        --quiz-option-chosen-bg-color: var(--color-3);
-        --quiz-option-font-color: var(--color-0-1);
-        --quiz-option-boxshadow-color: var(--color-1);
+        --quiz-option-bg-color: var(--color-2-2);
+        --quiz-option-hover-bg-color: var(--color-2);
+        --quiz-option-chosen-bg-color: var(--color-3-1);
+        --quiz-option-font-color: var(--color-0);
+        --quiz-option-boxshadow-color: var(--color-3-2);
 
-        --quiz-questionNav-bg-color: var(--color-2);
+        --quiz-questionNav-bg-color: var(--color-2-2);
         --quiz-questionNav-hover-bg-color: var(--color-2-1);
-        --quiz-questionNav-boxshadow-color: var(--color-1);
+        --quiz-questionNav-boxshadow-color: var(--color-3-2);
 
-        --quiz-active-color: var(--color-3);
-        --quiz-filled-color: var(--color-2-2);
+        --quiz-active-color: var(--color-3-1);
+        --quiz-filled-color: var(--color-3-1);
         --quiz-filled-hover-color: var(--color-2);
 
         --footer-bg-color: var(--color-3);

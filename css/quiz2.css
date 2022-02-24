@@ -1,3 +1,4 @@
+#quizz * { transition: all .5s; }
 #answers {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(max(230px, 45%), 1fr));
@@ -30,7 +31,7 @@
     padding-inline: 10pt;
     min-width: 40pt;
     color: var(--quiz-option-font-color);
-    background-color: var(--quiz-option-bg-color);
+    background-color: var(--quiz-questionNav-bg-color);
     box-shadow: 0 0 var(--quiz-questionNav-boxshadow-width) var(--quiz-questionNav-boxshadow-color) inset;
     border-radius: var(--quiz-questionNav-borderRadius);
 }
