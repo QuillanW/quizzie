@@ -77,12 +77,13 @@ const questions = [
     },
     {
         type: 'text',
-        question: 'This is question 3',
-        answer: ['qwerty', 'qwertz', 'azerty']
+        question: 'Welk soort water hebben we in Nederland naast oppervlaktewater',
+        answer: ['zeewater', 'zee water', 'zee-water']
     },
     {
-        type: 'number',
-        question: 'This is question 4',
-        answer: 42
+        type: 'text',
+        question: 'Wat betekend de witte vlag met een blouw vraagteken?',
+        // Ik kan helaas niet alle mogeijke variaties invullen :(.
+        answer: ['kind gevonden', 'kindgevonden', 'gevonden kind', 'gevondenkind']
     },
 ]

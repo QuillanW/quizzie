@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
@@ -7,35 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.css">
     <script src="js/all.js"></script>
-    <title>Quizzy Home</title>
+    <title>TestPage</title>
 </head>
 
 <body>
 
     <header>
-        <img src="../media/logo.png" alt="logo">
-        <div role="site-heading">Quizzy</div>
+        <div>
+            <img src="media/logo.png" alt="logo">
+            <div>Quizzy</div>
+        </div>
     </header>
 
     <nav>
-        <div id="mainNav" class="hidden">
+        <div id="mainNav" class="closed">
 
-            <div name="site-navigation">
-                <a href="">HOME</a>
+            <div>
+                <a href="../">HOME</a>
                 <a href="pages/quiz1.html">Quizz 1</a>
                 <a href="pages/quiz2.html">Quizz 2</a>
             </div>
 
-            <div name="in-page-navigation">
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-            </div>
+            <!-- <div class="divider"></div>
+
+            <div>
+                <a href="#1eTitle">1</a>
+                <a href="#2eTitle">2</a>
+                <a href="#3eTitle">3</a>
+            </div> -->
 
         </div>
 
-        <div id="mainNavToggle"
-            onclick="toggleClass('mainNavToggle', 'change'); toggleClass('mainNav','hidden')">
+        <div id="mainNavToggle" onclick="toggleClass('mainNavToggle', 'change'); toggleClass('mainNav','closed')">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
