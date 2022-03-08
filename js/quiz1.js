@@ -41,6 +41,13 @@ function makeQuestions() {
 function answer() {
   var answered = (event.target.parentElement.parentElement.id).replace("box","") - 1;
   var answered1 = (event.target.id).replace('answer', '');
+  var clickedButton = event.target;
+
+  for (let i = 0; i < 4; i++) {
+    answered.document.getElementById('answer' + i).classList.remove('chosenAnswer');
+    clickedButton.classList.add('chosenAnswer')
+  }
+
   let correct = false;
 
   if (answered1 == (questions[answered]['answer'])) {

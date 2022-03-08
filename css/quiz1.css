@@ -80,3 +80,7 @@
     max-width: min-content;
     margin: auto;
 }
+
+.chosenAnswer {
+    background-color: darkcyan;
+}
