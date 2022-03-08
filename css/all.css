@@ -117,6 +117,7 @@
     --footer-boxshadow-width: 5pt;
     --footer-boxshadow-color: var(--color-3);
 }
+/* Darkmode */
 @media (prefers-color-scheme: dark) {
     :root {
         --header-bg-color: var(--color-3);

@@ -13,11 +13,11 @@ const questions = [
         type: 'multipleChoice',
         question: 'Welke oppervlaktewater hebben we?',
         options: [
-            'Versierwater, beroepsvaart/ recreatievaart en al het andere',
             'Sierwater, beroepsvaart/ recreatievaart en waterbeheersing nederland',
+            'Versierwater, beroepsvaart/ recreatievaart en al het andere',
             'Sierwater, recreatievaar en beroepsvaar, water wat zorgt voor waterbeheersing in nederland en all ander water.',
         ],
-        answer: 1
+        answer: 0
     },
     {
         type: 'multipleChoice',
@@ -69,11 +69,11 @@ const questions = [
         type: 'multipleChoice',
         question: 'Waarom is het gevaarlijk om bij sluizen te zwemmen?',
         options: [
-            'Het water is koud, gevaarlijke stromming en kans op ziektes.',
             'Gevaarlijke stroming en veel scheepsvaartverkeer.',
+            'Het water is koud, gevaarlijke stromming en kans op ziektes.',
             'Je weet niet waneer de sluis open en dicht gaat.',
         ],
-        answer: 1
+        answer: 0
     },
     {
         type: 'text',
