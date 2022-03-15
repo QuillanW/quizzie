@@ -16,6 +16,12 @@
 #answers button.chosen { background-color: var(--quiz-option-chosen-bg-color); }
 #answers :hover:not(.chosen) { background-color: var(--quiz-option-hover-bg-color); }
 
+#questionNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5pt;
+}
+
 #questionNav button.active { --quiz-questionNav-boxshadow-color: var(--quiz-active-color); }
 #questionNav button.filled { background-color: var(--quiz-filled-color); }
 #questionNav button.right { background-color: var(--quiz-right-color); }

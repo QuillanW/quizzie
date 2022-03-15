@@ -13,18 +13,18 @@
     --color-3: #1d3354;
     --color-3-2: #15243B;
 
+    --color-4-1: #962D31;
     --color-4: #d64045;
-
+    --color-4-2: #571A1C;
+/* Logo */
+    --logo-UZZ-color: var(--color-3-2);
+    --logo-QY-color: #c1272d;
 /* Header */
     --header-bg-color: var(--color-1);
     --header-boxshadow-width: 5pt;
     --header-boxshadow-color: var(--color-3);
     --header-padding: 15pt;
-    --header-gap: 150pt;
-
-    --header-font-color: var(--color-3);
-    --header-font-size: 72pt;
-    --header-font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --header-logo-maxWidth: 75pt;
     
 /* Nav */
     --nav-maxWidht: 100pt;
@@ -120,24 +120,27 @@
 /* Darkmode */
 @media (prefers-color-scheme: dark) {
     :root {
+        --logo-UZZ-color: var(--color-2-1);
+        --logo-QY-color: #c1272d;
+
         --header-bg-color: var(--color-3);
         --header-boxshadow-color: var(--color-3);
         --header-font-color: var(--color-1);
 
         --nav-bg-color: var(--color-3);
-        --nav-boxshadow-color: var(--color-1);
+        --nav-boxshadow-color: var(--color-2-1);
         --nav-a-font-color: var(--color-1);
         --nav-a-hover-line-color: var(--color-4);
         --nav-devider-color: var(--color-4);
-        --nav-icon-color: var(--color-4);
+        --nav-icon-color: var(--color-1);
         --nav-icon-bg-color: var(--color-3);
 
         --body-bg-color: var(--color-2-2);
 
         --main-plain-font-color: var(--color-1);
-        --main-mainTitle-font-color: var(--color-3);
-        --main-subTitle2-font-color: var(--color-4);
-        --main-subTitle3-font-color: var(--color-4);
+        --main-mainTitle-font-color: var(--color-4-2);
+        --main-subTitle2-font-color: var(--color-4-1);
+        --main-subTitle3-font-color: var(--color-4-1);
         --main-subTitle4-font-color: var(--color-1);
 
         --contentbox-bg-color: var(--color-3);
@@ -177,23 +180,15 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 header {
     background-color: var(--header-bg-color);
     box-shadow: 0 0 var(--header-boxshadow-width) var(--header-boxshadow-color);
-}
-header > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    font-size: var(--header-font-size);
-    color: var(--header-font-color);
-    font-family: var(--header-font-family);
-    max-width: var(--main-maxWidht);
     padding: var(--header-padding);
-    gap: var(--header-gap);
+    display: grid;
+    justify-content: center;
 }
-header img {
-    max-width: var(--nav-maxWidht);
-    object-fit: cover;
+svg {
+    max-width: 300pt;
 }
+svg .cls-1 { fill: var(--logo-UZZ-color); }      
+svg .cls-2 { fill: var(--logo-QY-color); }
 
 body {
     background-color: var(--body-bg-color);
