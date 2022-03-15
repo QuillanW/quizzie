@@ -17,8 +17,8 @@
     --color-4: #d64045;
     --color-4-2: #571A1C;
 /* Logo */
-    --logo-UZZ-color: var(--color-3-2);
-    --logo-QY-color: #c1272d;
+    --logo-UZZ-color: var(--color-3);
+    --logo-QY-color: var(--color-4);
 /* Header */
     --header-bg-color: var(--color-1);
     --header-boxshadow-width: 5pt;
@@ -120,8 +120,8 @@
 /* Darkmode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --logo-UZZ-color: var(--color-2-1);
-        --logo-QY-color: #c1272d;
+        --logo-UZZ-color: var(--color-2-2);
+        --logo-QY-color: var(--color-4-1);
 
         --header-bg-color: var(--color-3);
         --header-boxshadow-color: var(--color-3);
