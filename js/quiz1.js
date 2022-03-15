@@ -41,12 +41,13 @@ function makeQuestions() {
 function answer() {
   var answered = (event.target.parentElement.parentElement.id).replace("box","") - 1;
   var answered1 = (event.target.id).replace('answer', '');
-  var clickedButton = event.target;
+  let clickedButton = event.target;
 
-  for (let i = 0; i < 4; i++) {
-    answered.document.getElementById('answer' + i).classList.remove('chosenAnswer');
-    clickedButton.classList.add('chosenAnswer')
-  }
+  clickedButton.parentElement.getElementsByClassName('answerButton').answer1.classList.remove('chosenAnswer');
+  clickedButton.parentElement.getElementsByClassName('answerButton').answer2.classList.remove('chosenAnswer');
+  clickedButton.parentElement.getElementsByClassName('answerButton').answer3.classList.remove('chosenAnswer');
+  clickedButton.parentElement.getElementsByClassName('answerButton').answer4.classList.remove('chosenAnswer');
+  clickedButton.classList.add('chosenAnswer')
 
   let correct = false;
 
