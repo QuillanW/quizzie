@@ -2,12 +2,13 @@
     <defs>
         <style>
             .cls-1 {
-                fill: black;
+                fill: #3B6280;
             }
 
             .cls-2 {
-                fill: #c1272d;
+                fill: #d64045;
             }
+
         </style>
     </defs>
     <g id="Layer_2" data-name="Layer 2">

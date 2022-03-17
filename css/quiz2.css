@@ -35,7 +35,7 @@
 #questionNav button {
     border: none;
     padding-inline: 10pt;
-    min-width: 40pt;
+    /* min-width: 40pt; */
     color: var(--quiz-option-font-color);
     background-color: var(--quiz-questionNav-bg-color);
     box-shadow: 0 0 var(--quiz-questionNav-boxshadow-width) var(--quiz-questionNav-boxshadow-color) inset;

@@ -16,15 +16,13 @@
     --color-4-1: #962D31;
     --color-4: #d64045;
     --color-4-2: #571A1C;
-/* Logo */
-    --logo-UZZ-color: var(--color-3);
-    --logo-QY-color: var(--color-4);
+
 /* Header */
     --header-bg-color: var(--color-1);
     --header-boxshadow-width: 5pt;
     --header-boxshadow-color: var(--color-3);
     --header-padding: 15pt;
-    --header-logo-maxWidth: 75pt;
+    --header-logo-maxWidth: 250pt;
     
 /* Nav */
     --nav-maxWidht: 100pt;
@@ -120,9 +118,6 @@
 /* Darkmode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --logo-UZZ-color: var(--color-2-2);
-        --logo-QY-color: var(--color-4-1);
-
         --header-bg-color: var(--color-3);
         --header-boxshadow-color: var(--color-3);
         --header-font-color: var(--color-1);
@@ -175,7 +170,10 @@ img, video {
     max-width: 100%;
 }
 input, button, textarea, select { font: inherit; }
-p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+p, h1, h2, h3, h4, h5, h6 {
+    word-break:break-all;
+    overflow-wrap: break-word;
+}
 
 header {
     background-color: var(--header-bg-color);
@@ -184,11 +182,9 @@ header {
     display: grid;
     justify-content: center;
 }
-svg {
-    max-width: 300pt;
+header img {
+    max-width: var(--header-logo-maxWidth);
 }
-svg .cls-1 { fill: var(--logo-UZZ-color); }      
-svg .cls-2 { fill: var(--logo-QY-color); }
 
 body {
     background-color: var(--body-bg-color);
@@ -219,7 +215,7 @@ nav {
 .change .bar2 { opacity: 0; }
 .change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
 div#mainNav {
-    min-width: max-content;
+    /* min-width: max-content; */
     max-height: calc(90vh - 50px);
     overflow: auto;
     border-radius: var(--nav-borderRadius);
