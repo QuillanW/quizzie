@@ -216,7 +216,8 @@ nav {
 .change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
 div#mainNav {
     max-height: calc(90vh - 50px);
-    width: clamp(calc(90vh - 50px), max-content, 500pt);
+    width: max-content;
+    max-width: 150pt;
     overflow: auto;
     border-radius: var(--nav-borderRadius);
     background-color: var(--nav-bg-color);
@@ -307,6 +308,9 @@ main h4 {
 }
 
 footer {
+    color: var(--main-plain-font-color);
     background-color: var(--footer-bg-color);
     box-shadow: 0 0 var(--footer-boxshadow-width) var(--footer-boxshadow-color);
+    padding: calc(var(--main-padding-and-gap)/2);
 }
+footer a { color: var(--main-plain-font-color); }
