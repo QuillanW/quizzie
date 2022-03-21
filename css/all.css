@@ -215,9 +215,8 @@ nav {
 .change .bar2 { opacity: 0; }
 .change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
 div#mainNav {
-    /* min-width: max-content; */
     max-height: calc(90vh - 50px);
-    width: clamp(0pt, max-content, 90vw);
+    width: clamp(calc(90vh - 50px), max-content, 500pt);
     overflow: auto;
     border-radius: var(--nav-borderRadius);
     background-color: var(--nav-bg-color);
