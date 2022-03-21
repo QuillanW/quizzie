@@ -183,7 +183,7 @@ header {
     justify-content: center;
 }
 header img {
-    max-width: var(--header-logo-maxWidth);
+    max-width: clamp(0px, var(--header-logo-maxWidth), 90vw);
 }
 
 body {
@@ -217,6 +217,7 @@ nav {
 div#mainNav {
     /* min-width: max-content; */
     max-height: calc(90vh - 50px);
+    width: clamp(0pt, max-content, 90vw);
     overflow: auto;
     border-radius: var(--nav-borderRadius);
     background-color: var(--nav-bg-color);
