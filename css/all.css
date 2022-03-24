@@ -312,5 +312,6 @@ footer {
     background-color: var(--footer-bg-color);
     box-shadow: 0 0 var(--footer-boxshadow-width) var(--footer-boxshadow-color);
     padding: calc(var(--main-padding-and-gap)/2);
+    font-family: var(--main-plain-font-family);
 }
 footer a { color: var(--main-plain-font-color); }
